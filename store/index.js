@@ -4,18 +4,19 @@ export const state = () => ({
 })
 
 export const mutations = {
-  increment (state) {
-    state.counter++
+  save (state, value) {
+    state.counter = value
   }
 }
 
 export const actions = {
   incrementAsync ({ commit, state }) {
-    axios.post('/api')
+    axios.post(`/api?counter=${state.counter}`)
       .then(function (response) {
         const data = response.data
+        commit.save(data.counter)
         // eslint-disable-next-line no-console
-        console.log(data.counter)
+        console.log(state.counter)
       })
       .catch(function (error) {
         // eslint-disable-next-line no-console

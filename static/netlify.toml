@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/api"
-  to = "https://ldkkdd2lui.execute-api.eu-central-1.amazonaws.com/staging/?counter=2"
+  to = "https://ldkkdd2lui.execute-api.eu-central-1.amazonaws.com/staging/"
   status = 200
   force = true
   headers = {X-From = "Netlify"}
