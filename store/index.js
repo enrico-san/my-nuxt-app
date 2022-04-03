@@ -11,7 +11,7 @@ export const mutations = {
 
 export const actions = {
   incrementAsync ({ commit, state }) {
-    axios.post('https://ldkkdd2lui.execute-api.eu-central-1.amazonaws.com/staging/?counter=2')
+    axios.post('/api')
       .then(function (response) {
         const data = response.data
         // eslint-disable-next-line no-console
