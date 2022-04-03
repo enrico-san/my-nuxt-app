@@ -14,7 +14,7 @@ export const actions = {
     axios.post(`/api?counter=${state.counter}`)
       .then(function (response) {
         const data = response.data
-        commit.save(data.counter)
+        commit('save', data.counter)
         // eslint-disable-next-line no-console
         console.log(state.counter)
       })
