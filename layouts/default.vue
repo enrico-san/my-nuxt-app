@@ -48,7 +48,7 @@
       >
         <v-icon>mdi-minus</v-icon>
       </v-btn>
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title v-text="`${title} (${$store.state.counter})`" />
       <v-spacer />
       <v-btn
         icon
@@ -106,12 +106,22 @@ export default {
           icon: 'mdi-chart-bubble',
           title: 'Inspire',
           to: '/inspire'
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'collect',
+          to: '/test-collect'
         }
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
       title: 'Vuetify.js'
+    }
+  },
+  watch: {
+    $route (to, from) {
+      this.$store.dispatch('incrementAsync')
     }
   }
 }

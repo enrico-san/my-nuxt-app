@@ -1,5 +1,9 @@
 # my-nuxt-app
 
+## reminders
+// eslint-disable-next-line no-console
+
+
 ## Build Setup
 
 ```bash
